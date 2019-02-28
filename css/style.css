@@ -1,0 +1,180 @@
+body{
+    font-family: 'Dancing Script', cursive;
+    background:  #02010a;   
+    margin: 0;
+    animation: animation 3s;
+}
+#contenido{
+    max-width: 900px;
+    top: 0;
+    margin: 0 auto;
+}
+header{
+    border-radius: 10px 10px 0 0;
+    background: #5b7989;
+    color: #FFF !important;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px 15px 25px;
+}
+header div{
+    font-size: 3em;
+    width: 70%;
+    text-shadow: 2px 2px #02010a;
+}
+header nav{
+    width: 30%;
+}
+nav ul li{
+    display: inline;
+    padding-right: 3%;
+    text-decoration: underline;
+}
+li a{
+    text-decoration: none;
+    color: #FFF;
+}
+#principal{
+    background: #82c3a6;
+    text-align: center;
+    padding: 15px;
+}
+#img_principal{
+    width: 80%;
+}
+#secundaria{
+    display: flex;
+    flex-flow: row nowrap;
+    background: #d5c75f ;
+    justify-content: center;
+    align-items: center;
+}
+#secundaria1, #secundaria2{
+    text-align: center;
+    padding: 5px;
+}
+.img_secundaria{
+    width: 90%;
+    border: 1px solid;
+}
+footer{
+    background: #C6d5c5;
+    border-radius: 0 0 10px 10px;
+}
+#paisaje:hover{
+    animation: rotacion 2s;
+    box-shadow: 2px #82c3a6;
+}
+
+#retrato:hover{
+    animation: translate 2s;
+    box-shadow: 2px #82c3a6;
+}
+h1{
+    margin: 0;
+}
+footer{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.footer{
+    padding: 15px;
+}
+#paisaje_section, #retrato_section{
+    display: flex;
+    flex-flow: row wrap;
+    background: #d5c75f ;
+}
+.paisaje_box, .retrato_box{
+    width: 33.33%;
+}
+.paisaje_img, .retrato_img{
+    width: 100%;
+    border: 1px solid;
+}
+footer div ul{
+    list-style-type: none;
+    padding-inline-start:5px; 
+}
+@media screen and (max-width: 900px) {
+    #contenido{
+        width: 100%;
+    }
+    header{
+        flex-flow: column nowrap;
+        padding: 15px 10px;
+    }
+    header div, header nav{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    header nav ul {
+        padding: 0;
+    }
+    #img_principal{
+        width: 90%;
+    }
+    #secundaria{
+        flex-flow: column nowrap;
+        padding: 15px;
+    }
+    footer{
+        flex-flow: column nowrap;
+        padding: 10px 20px;
+    }
+    #paisaje_section, #retrato_section{
+        flex-flow: column nowrap;
+        padding: 15px;
+    }
+    .paisaje_box, .retrato_box{
+        width: 100%;
+    }
+} 
+#retrato1, #paisaje1{
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+#retrato2, #paisaje2, #retrato4, #paisaje4, #retrato6, #paisaje6{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+} 
+#retrato3, #paisaje3{
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+@-webkit-keyframes animation{
+    0%{
+        margin-top: 150%;
+    }
+    60%{
+        margin-top: -5%;
+    }
+    100%{
+        margin-top: 0%;
+    }
+}
+@-webkit-keyframes rotacion{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes translate{
+    0%{
+        transform: translate(0px,0px);
+    }
+    50%{
+        transform: translate(20px,-5px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
